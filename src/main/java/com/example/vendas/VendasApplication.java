@@ -14,7 +14,7 @@ import java.util.List;
 public class VendasApplication {
 
 	@Bean
-	public CommandLineRunner init(@Autowired Clientes clientes){
+	public CommandLineRunner init(@Autowired Clientes clientes) {
 		return args -> {
 			/*Cliente cliente = new Cliente();
 			cliente.setNome("Marcos Alexandre");
@@ -31,10 +31,10 @@ public class VendasApplication {
 				c.setNome(c.getNome() + " atualizado.");
 				clientes.atualizar(c);
 			});
-		/*	  System.out.println("deletando clientes");
+			  System.out.println("deletando clientes");
               clientes.obterTodos().forEach(c -> {
 				  clientes.deletar(c);
-            });*/
+            });
             todosClientes = clientes.obterTodos();
 			if(todosClientes.isEmpty()){
 				System.out.println("Nenhum cliente encontrado.");
